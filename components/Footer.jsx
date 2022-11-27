@@ -339,6 +339,7 @@ const Footer = () => {
                     </button>
                   </div>
                 </form>
+
                 <h5 className="pt-5">Síguenos</h5>
                 <div className="social-style-one">
                   <Link href="https://www.linkedin.com/company/meKambio/?viewAsMember=true">
