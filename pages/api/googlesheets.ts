@@ -34,7 +34,7 @@ export default async function handler(
     });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
-      range: "A1",
+      range: "Sheet1!A1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [[body.email]],
