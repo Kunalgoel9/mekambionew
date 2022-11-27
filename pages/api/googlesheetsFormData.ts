@@ -35,7 +35,6 @@ export default async function handler(
       auth,
       version: "v4",
     });
-    const valuesRange = sheets.spreadsheets.values.get();
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
