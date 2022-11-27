@@ -44,7 +44,7 @@ export default async function handler(
         values: [[body.name, body.surname, body.formEmail, body.phone]],
       },
     });
-    console.log(response);
+
     return res.status(200).json({
       data: response.data,
     });
