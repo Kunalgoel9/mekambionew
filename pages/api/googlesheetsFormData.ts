@@ -14,7 +14,7 @@ export default async function handler(
     if (req.method != "POST") {
       res.status(405).send({ message: "Only Post requests are allowed" });
     }
-    console.log("run");
+
     const body = req.body as SheetForm;
 
     const auth = new google.auth.GoogleAuth({
