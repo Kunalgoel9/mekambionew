@@ -19,8 +19,8 @@ export default async function handler(
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
-        client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY,
+        client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL2,
+        private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY2,
       },
       scopes: [
         "https://www.googleapis.com/auth/drive",
@@ -35,8 +35,8 @@ export default async function handler(
     const valuesRange = sheets.spreadsheets.values.get();
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
-      range: "Sheet2!A:D",
+      spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID2,
+      range: "A1:D1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [[body.name, body.surname, body.formEmail, body.phone]],
